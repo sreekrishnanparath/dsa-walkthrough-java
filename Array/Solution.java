@@ -1,4 +1,4 @@
-package dsa;
+package dsa.Array;
 
 import java.io.*;
 import java.math.*;
