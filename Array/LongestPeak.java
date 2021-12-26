@@ -23,4 +23,38 @@ public class LongestPeak {
 
     
     */
+    //O(n),O(1)
+    public static void main(String[] args) {
+        int[] array = {1,2,3,3,4,0,10,6,5,-1,-3,2,3};
+        System.out.println(longestPeak(array));
+    }
+    
+    public static int longestPeak(int[] array){
+        
+        int longestPeak = 0;
+        
+        int i= 1;
+        while(i<array.length-1){
+            
+            if(!(i>=0 && array[i-1]<array[i] && array[i]>array[i+1])){
+                i+=1;
+                continue;
+            }
+            
+            int leftIndex = i-2;
+            while(leftIndex>=0 && array[leftIndex]<array[leftIndex+1]){
+                leftIndex--;
+            }
+            int rightIndex = i+2;
+            while(rightIndex<array.length && array[rightIndex]<array[rightIndex-1]){
+                rightIndex++;                
+            }
+            int currRange = rightIndex - leftIndex -1;
+            longestPeak = Math.max(longestPeak, currRange);
+            i = rightIndex;
+        }
+        
+        return longestPeak;
+        
+    }
 }
