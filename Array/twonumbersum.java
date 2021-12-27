@@ -62,7 +62,8 @@ class twonumbersum {
     }
   
   public static void main(String args[]){
-  int[] nums = {3, 5, -4, 8, 11, 1, -1, 6} ;
+  //int[] nums = {3, 5, -4, 8, 11, 1, -1, 6} ;
+   int[] nums = {3,7,5,15} ;
      System.out.println(twoSum(nums,10));
       System.out.println(twoNumberSumList(Arrays.asList(3, 5, -4, 8, 11, 1, -1, 6),10));
       

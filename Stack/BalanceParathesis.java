@@ -34,8 +34,9 @@ public class BalanceParathesis {
             // If current character is not opening
             // bracket, then it must be closing. So stack
             // cannot be empty at this point.
-            //if (stack.isEmpty())
-             //   return false;
+            if (stack.isEmpty())
+                return false;
+            
             char check;
             switch (x) {
             case ')':
@@ -65,7 +66,7 @@ public class BalanceParathesis {
     // Driver code
     public static void main(String[] args)
     {
-        String expr = ")[]}";
+        String expr = "()[]{}";
  
         // Function call
         if (areBracketsBalanced(expr))

@@ -16,11 +16,14 @@ public class Fibonacci {
         
         System.out.println(System.currentTimeMillis());
         //for(int i=1;i<=10;i++){
-            System.out.println(findFib(10000));
+            System.out.println(findFib(15));
+            System.out.println(findFibRecursion(15));
+            
         //}
         System.out.println(System.currentTimeMillis());
     }
     
+    //memoize
     static int findFib(int n){        
         
         if(n==1 || n==2)
@@ -38,4 +41,14 @@ public class Fibonacci {
         
     }
     
+        static int findFibRecursion(int n){        
+        
+        if(n==1 || n==2)
+            return 1;            
+        
+        return findFibRecursion(n-1)+findFibRecursion(n-2);
+        
+        
+        
+    }
 }

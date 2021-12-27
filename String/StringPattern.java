@@ -41,7 +41,7 @@ public class StringPattern {
     public static void main(String args[]){
         
         //String str = "don is not this";
-       String str = "this is is this.";
+       String str = "this is is this";
         String pattern = "abba";
         
         System.out.println("result = "+check(str,pattern));
